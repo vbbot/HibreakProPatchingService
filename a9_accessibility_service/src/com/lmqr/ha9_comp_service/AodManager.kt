@@ -41,7 +41,8 @@ class AodManager : NotificationListenerService() {
     override fun onCreate() {
         super.onCreate()
         commandRunner = UnixSocketCommandRunner()
-        refreshModeManager = RefreshModeManager(commandRunner)
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        refreshModeManager = RefreshModeManager(sharedPreferences, commandRunner)
         powerManager = getSystemService(Context.POWER_SERVICE) as PowerManager
         alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         clearScreenAction = ClearScreenButtonAction(commandRunner, refreshModeManager)
