@@ -56,7 +56,7 @@
                 android:resource="@xml/accessibility_service_config" />
         </service>
         <service
-            android:name=".EinkAodManager"
+            android:name=".AodManager"
             android:label="E-Ink AOD Manager"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
             android:exported="false">
@@ -64,7 +64,7 @@
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
         </service>
-        
+
         <service
             android:name=".quick_settings.LaunchSettingsTile"
             android:exported="true"
