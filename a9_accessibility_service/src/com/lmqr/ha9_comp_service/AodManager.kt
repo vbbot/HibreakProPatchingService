@@ -133,7 +133,7 @@ class AodManager : NotificationListenerService() {
     }
     
     private fun isAodActive(): Boolean {
-        return Settings.Secure.getInt(contentResolver, "doze_enabled", 0) == 1 && 
+        return Settings.Secure.getInt(contentResolver, "doze_always_on", 0) == 1 && 
                !powerManager.isInteractive
     }
     
