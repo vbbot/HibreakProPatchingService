@@ -22,7 +22,7 @@ class AodManager : NotificationListenerService() {
     private lateinit var commandRunner: CommandRunner
     private lateinit var refreshModeManager: RefreshModeManager
     private lateinit var powerManager: PowerManager
-    private lateinit alarmManager: AlarmManager
+    private lateinit var alarmManager: AlarmManager
     private lateinit var clearScreenAction: ClearScreenButtonAction
     private var lastRefreshTime = 0L
 
